@@ -1,15 +1,14 @@
 package core.gui;
 
+import core.encryptors.Encryptor;
 import core.encryptors.blowfish.BlowfishEncrypt;
 import core.exceptions.CannotCreateEncryptException;
 
+import java.awt.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.*;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -17,7 +16,7 @@ import javax.swing.*;
 
 public class MainGUI extends JPanel {
 
-    private BlowfishEncrypt bfe;
+    private Encryptor bfe;
 
     private static final Insets EMPTY_INSETS = new Insets(0, 0, 0, 0);
 
@@ -31,7 +30,52 @@ public class MainGUI extends JPanel {
 
     private SortedListModel sourceListModel;
 
-    public MainGUI() {
+    public static void start() {
+        JFrame f = new JFrame("File coder");
+
+        Font font = new Font("Verdana", Font.PLAIN, 11);
+        JMenuBar menuBar = new JMenuBar();
+
+        JMenu fileMenu = new JMenu("Settings");
+        fileMenu.setFont(font);
+
+        JMenuItem exitItem = new JMenuItem("Choose folder");
+        exitItem.setFont(font);
+        fileMenu.add(exitItem);
+
+        exitItem.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                JFileChooser fileopen = new JFileChooser();
+                fileopen.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+                int ret = fileopen.showDialog(null, "Choose folder");
+                if (ret == JFileChooser.APPROVE_OPTION) {
+                    fileopen.getSelectedFile().getAbsolutePath();
+                }
+            }
+        });
+
+        menuBar.add(fileMenu);
+
+        f.setJMenuBar(menuBar);
+
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        MainGUI dual = new MainGUI();
+        File root = new File(BlowfishEncrypt.PACKAGE);
+        ArrayList<String> fileNames = new ArrayList<>();
+        File[] matchingFiles = root.listFiles((File dir, String name) -> {
+            if (name.startsWith(".") && !name.equals(".acab")) {
+                System.out.println(name);
+                fileNames.add(name);
+            }
+            return name.startsWith(".");
+        });
+        dual.addSourceElements(fileNames.toArray());
+        f.getContentPane().add(dual, BorderLayout.CENTER);
+        f.setSize(400, 300);
+        f.setVisible(true);
+    }
+
+    MainGUI() {
         try {
             this.bfe = BlowfishEncrypt.getInstance();
         } catch (CannotCreateEncryptException e) {
@@ -40,7 +84,7 @@ public class MainGUI extends JPanel {
         initScreen();
     }
 
-    public void addSourceElements(Object newValue[]) {
+    void addSourceElements(Object newValue[]) {
         fillListModel(sourceListModel, newValue);
     }
 

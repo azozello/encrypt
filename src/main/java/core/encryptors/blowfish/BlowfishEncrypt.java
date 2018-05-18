@@ -14,8 +14,6 @@ import java.security.NoSuchAlgorithmException;
 
 public class BlowfishEncrypt implements Encryptor {
 
-    public static final String PACKAGE = "src/main/resources/";
-
     private static BlowfishEncrypt instance;
     private Key secretKey;
 
