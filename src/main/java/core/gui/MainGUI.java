@@ -1,7 +1,9 @@
 package core.gui;
 
 import core.encryptors.Encryptor;
+import core.encryptors.aes.AESEncrypt;
 import core.encryptors.blowfish.BlowfishEncrypt;
+import core.encryptors.des.DESEncrypt;
 import core.exceptions.CannotCreateEncryptException;
 
 import java.awt.*;
@@ -16,7 +18,7 @@ import javax.swing.*;
 
 public class MainGUI extends JPanel {
 
-    private Encryptor bfe;
+    private static Encryptor encrypt;
 
     private static final Insets EMPTY_INSETS = new Insets(0, 0, 0, 0);
 
@@ -39,20 +41,51 @@ public class MainGUI extends JPanel {
         JMenu fileMenu = new JMenu("Settings");
         fileMenu.setFont(font);
 
-        JMenuItem exitItem = new JMenuItem("Choose folder");
-        exitItem.setFont(font);
-        fileMenu.add(exitItem);
+        JMenuItem chooseFolder = new JMenuItem("Choose folder");
+        chooseFolder.setFont(font);
+        fileMenu.add(chooseFolder);
 
-        exitItem.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                JFileChooser fileopen = new JFileChooser();
-                fileopen.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-                int ret = fileopen.showDialog(null, "Choose folder");
-                if (ret == JFileChooser.APPROVE_OPTION) {
-                    fileopen.getSelectedFile().getAbsolutePath();
-                }
+        JMenu chooseAlgorithm = new JMenu("Choose algorithm");
+        chooseAlgorithm.setFont(font);
+        fileMenu.add(chooseAlgorithm);
+
+        JMenuItem blowfish = new JMenuItem("Blowfish");
+        blowfish.setFont(font);
+        chooseAlgorithm.add(blowfish);
+
+        JMenuItem AES = new JMenuItem("AES");
+        AES.setFont(font);
+        chooseAlgorithm.add(AES);
+
+        JMenuItem DES = new JMenuItem("DES");
+        DES.setFont(font);
+        chooseAlgorithm.add(DES);
+
+        blowfish.addActionListener((action) -> {
+            try {
+                MainGUI.encrypt = BlowfishEncrypt.getInstance();
+            } catch (CannotCreateEncryptException c) {
+                c.printStackTrace();
             }
         });
+
+        AES.addActionListener((action) -> {
+            try {
+                MainGUI.encrypt = AESEncrypt.getInstance();
+            } catch (CannotCreateEncryptException c) {
+                c.printStackTrace();
+            }
+        });
+
+        DES.addActionListener((action) -> {
+            try {
+                MainGUI.encrypt = DESEncrypt.getInstance();
+            } catch (CannotCreateEncryptException c) {
+                c.printStackTrace();
+            }
+        });
+
+        chooseFolder.addActionListener((action) -> System.out.println("Choose folder"));
 
         menuBar.add(fileMenu);
 
@@ -62,6 +95,7 @@ public class MainGUI extends JPanel {
         MainGUI dual = new MainGUI();
         File root = new File(BlowfishEncrypt.PACKAGE);
         ArrayList<String> fileNames = new ArrayList<>();
+
         File[] matchingFiles = root.listFiles((File dir, String name) -> {
             if (name.startsWith(".") && !name.equals(".acab")) {
                 System.out.println(name);
@@ -69,6 +103,7 @@ public class MainGUI extends JPanel {
             }
             return name.startsWith(".");
         });
+
         dual.addSourceElements(fileNames.toArray());
         f.getContentPane().add(dual, BorderLayout.CENTER);
         f.setSize(400, 300);
@@ -77,7 +112,7 @@ public class MainGUI extends JPanel {
 
     MainGUI() {
         try {
-            this.bfe = BlowfishEncrypt.getInstance();
+            MainGUI.encrypt = BlowfishEncrypt.getInstance();
         } catch (CannotCreateEncryptException e) {
             e.printStackTrace();
         }
@@ -130,7 +165,7 @@ public class MainGUI extends JPanel {
                 File source = fileopen.getSelectedFile();
                 File result = new File(BlowfishEncrypt.PACKAGE + "." + source.getName());
                 try {
-                    bfe.encrypt(new FileInputStream(source), new FileOutputStream(result));
+                    encrypt.encrypt(new FileInputStream(source), new FileOutputStream(result));
                     addDestinationElements(result.getName());
                 } catch (Throwable t) {
                     t.printStackTrace();
@@ -153,7 +188,7 @@ public class MainGUI extends JPanel {
                     System.out.println(o);
 
                     try {
-                        bfe.decrypt(new FileInputStream(encoded), new FileOutputStream(decoded));
+                        encrypt.decrypt(new FileInputStream(encoded), new FileOutputStream(decoded));
                     } catch (Throwable t) {
                         t.printStackTrace();
                     }
@@ -161,7 +196,6 @@ public class MainGUI extends JPanel {
             }
         }
     }
-
 
     class SortedListModel extends AbstractListModel {
 

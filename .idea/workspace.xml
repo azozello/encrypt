@@ -2,19 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc7238ad-b11c-4b49-b3d0-09c61e09e7d3" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/core/encryptors/Folders.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/core/encryptors/aes/AESEncrypt.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/core/encryptors/des/DESEncrypt.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/Main.java" afterPath="$PROJECT_DIR$/src/main/java/core/Main.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/core/encryptors/Encryptor.java" afterPath="$PROJECT_DIR$/src/main/java/core/encryptors/Encryptor.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/core/encryptors/blowfish/BlowfishEncrypt.java" afterPath="$PROJECT_DIR$/src/main/java/core/encryptors/blowfish/BlowfishEncrypt.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/core/gui/MainGUI.java" afterPath="$PROJECT_DIR$/src/main/java/core/gui/MainGUI.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/.acab" afterPath="$PROJECT_DIR$/target/classes/.acab" />
-      <change beforePath="$PROJECT_DIR$/target/classes/core/Main.class" afterPath="$PROJECT_DIR$/target/classes/core/Main.class" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/.acab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/.acab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/core/encryptors/Encryptor.class" afterPath="$PROJECT_DIR$/target/classes/core/encryptors/Encryptor.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/core/encryptors/blowfish/BlowfishEncrypt.class" afterPath="$PROJECT_DIR$/target/classes/core/encryptors/blowfish/BlowfishEncrypt.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/core/gui/MainGUI$1.class" afterPath="$PROJECT_DIR$/target/classes/core/gui/MainGUI$1.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/core/gui/MainGUI$AddListener.class" afterPath="$PROJECT_DIR$/target/classes/core/gui/MainGUI$AddListener.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/core/gui/MainGUI$RemoveListener.class" afterPath="$PROJECT_DIR$/target/classes/core/gui/MainGUI$RemoveListener.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/core/gui/MainGUI$SortedListModel.class" afterPath="$PROJECT_DIR$/target/classes/core/gui/MainGUI$SortedListModel.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/core/gui/MainGUI.class" afterPath="$PROJECT_DIR$/target/classes/core/gui/MainGUI.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/decrypted.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/original.txt" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,15 +28,19 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/encrypt$Main.coverage" NAME="Main Coverage Results" MODIFIED="1526846376301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>core.*</FILTER>
+    </SUITE>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/core/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
-              <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
-                <element signature="e#105#106#0" expanded="true" />
                 <element signature="e#136#137#0" expanded="true" />
               </folding>
             </state>
@@ -43,11 +50,13 @@
       <file leaf-file-name="MainGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/core/gui/MainGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-663">
-              <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+            <state relative-caret-position="-530">
+              <caret line="63" column="42" lean-forward="false" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
               <folding>
-                <element signature="method#MainGUI#0;class#MainGUI#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#initScreen#0;class#MainGUI#0" expanded="false" />
                 <element signature="class#AddListener#0;class#MainGUI#0" expanded="false" />
+                <element signature="class#RemoveListener#0;class#MainGUI#0" expanded="false" />
                 <element signature="class#SortedListModel#0;class#MainGUI#0" expanded="false" />
                 <element signature="method#add#0;class#SortedListModel#0;class#MainGUI#0" expanded="false" />
                 <element signature="method#addAll#0;class#SortedListModel#0;class#MainGUI#0" expanded="false" />
@@ -60,9 +69,11 @@
       <file leaf-file-name="Encryptor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/core/encryptors/Encryptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-              <folding />
+            <state relative-caret-position="144">
+              <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+              <folding>
+                <element signature="method#doCopy#0;class#Encryptor#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,15 +81,65 @@
       <file leaf-file-name="BlowfishEncrypt.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/core/encryptors/blowfish/BlowfishEncrypt.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="28" column="51" lean-forward="false" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+            <state relative-caret-position="-15">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#getInstance#0;class#BlowfishEncrypt#0" expanded="false" />
+                <element signature="method#BlowfishEncrypt#0;class#BlowfishEncrypt#0" expanded="false" />
                 <element signature="method#encrypt#0;class#BlowfishEncrypt#0" expanded="false" />
                 <element signature="method#decrypt#0;class#BlowfishEncrypt#0" expanded="false" />
                 <element signature="method#encryptOrDecrypt#0;class#BlowfishEncrypt#0" expanded="false" />
-                <element signature="method#doCopy#0;class#BlowfishEncrypt#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Folders.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/core/encryptors/Folders.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="e#193#194#0" expanded="true" />
+                <element signature="e#225#226#0" expanded="true" />
+                <element signature="e#271#272#0" expanded="true" />
+                <element signature="e#298#299#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AESEncrypt.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/core/encryptors/aes/AESEncrypt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="84" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DESEncrypt.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/core/encryptors/des/DESEncrypt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CannotCreateEncryptException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/core/exceptions/CannotCreateEncryptException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -89,6 +150,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -101,6 +163,9 @@
       <find>Remove</find>
       <find>AddL</find>
       <find>fillListModel</find>
+      <find>exitItem</find>
+      <find>newMenu</find>
+      <find>bfe</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -126,9 +191,15 @@
         <option value="$PROJECT_DIR$/src/main/java/core/yarik/Cilinder.java" />
         <option value="$PROJECT_DIR$/src/main/java/core/yarik/YM.java" />
         <option value="$PROJECT_DIR$/src/main/java/core/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/core/gui/MainGUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/core/models/Settings.java" />
+        <option value="$PROJECT_DIR$/src/main/java/core/encryptors/blowfish/AESEncrypt.java" />
         <option value="$PROJECT_DIR$/src/main/java/core/encryptors/Encryptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/core/encryptors/Folders.java" />
         <option value="$PROJECT_DIR$/src/main/java/core/encryptors/blowfish/BlowfishEncrypt.java" />
+        <option value="$PROJECT_DIR$/src/main/java/core/encryptors/aes/AESEncrypt.java" />
+        <option value="$PROJECT_DIR$/src/main/java/core/encryptors/des/DESEncrypt.java" />
+        <option value="$PROJECT_DIR$/src/main/java/core/encryptors/oaep/OAEPEncrypt.java" />
+        <option value="$PROJECT_DIR$/src/main/java/core/gui/MainGUI.java" />
       </list>
     </option>
   </component>
@@ -166,8 +237,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -218,7 +291,27 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="encryptors" type="462c0819:PsiDirectoryNode" />
+              <item name="aes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="encrypt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="encrypt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="encryptors" type="462c0819:PsiDirectoryNode" />
               <item name="blowfish" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="encrypt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="encrypt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="encryptors" type="462c0819:PsiDirectoryNode" />
+              <item name="des" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="encrypt" type="b2602c69:ProjectViewProjectNode" />
@@ -242,8 +335,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -420,7 +511,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24237000" />
+    <option name="totallyTimeSpent" value="29255000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="743" extended-state="6" />
@@ -434,24 +525,46 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33006537" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24772727" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25530303" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3990228" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3990228" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33006537" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24772727" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,43 +575,17 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/core/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/core/gui/MainGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1854">
-          <caret line="103" column="53" lean-forward="false" selection-start-line="103" selection-start-column="53" selection-end-line="103" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#MainGUI#0;class#MainGUI#0" expanded="false" />
-            <element signature="class#AddListener#0;class#MainGUI#0" expanded="false" />
-            <element signature="class#SortedListModel#0;class#MainGUI#0" expanded="false" />
-            <element signature="method#add#0;class#SortedListModel#0;class#MainGUI#0" expanded="false" />
-            <element signature="method#addAll#0;class#SortedListModel#0;class#MainGUI#0" expanded="false" />
-            <element signature="method#removeElement#0;class#SortedListModel#0;class#MainGUI#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/core/encryptors/Encryptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="method#doCopy#0;class#Encryptor#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -509,10 +596,11 @@
           <caret line="47" column="17" lean-forward="false" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getInstance#0;class#BlowfishEncrypt#0" expanded="false" />
+            <element signature="method#BlowfishEncrypt#0;class#BlowfishEncrypt#0" expanded="false" />
             <element signature="method#encrypt#0;class#BlowfishEncrypt#0" expanded="false" />
             <element signature="method#decrypt#0;class#BlowfishEncrypt#0" expanded="false" />
             <element signature="method#encryptOrDecrypt#0;class#BlowfishEncrypt#0" expanded="false" />
-            <element signature="method#doCopy#0;class#BlowfishEncrypt#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -538,7 +626,7 @@
         <state relative-caret-position="54">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#136#137#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -548,9 +636,10 @@
         <state relative-caret-position="810">
           <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#MainGUI#0;class#MainGUI#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#initScreen#0;class#MainGUI#0" expanded="false" />
             <element signature="class#AddListener#0;class#MainGUI#0" expanded="false" />
+            <element signature="class#RemoveListener#0;class#MainGUI#0" expanded="false" />
             <element signature="class#SortedListModel#0;class#MainGUI#0" expanded="false" />
             <element signature="method#add#0;class#SortedListModel#0;class#MainGUI#0" expanded="false" />
             <element signature="method#addAll#0;class#SortedListModel#0;class#MainGUI#0" expanded="false" />
@@ -564,7 +653,7 @@
         <state relative-caret-position="90">
           <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="method#doCopy#0;class#Encryptor#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -575,10 +664,11 @@
           <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getInstance#0;class#BlowfishEncrypt#0" expanded="false" />
+            <element signature="method#BlowfishEncrypt#0;class#BlowfishEncrypt#0" expanded="false" />
             <element signature="method#encrypt#0;class#BlowfishEncrypt#0" expanded="false" />
             <element signature="method#decrypt#0;class#BlowfishEncrypt#0" expanded="false" />
             <element signature="method#encryptOrDecrypt#0;class#BlowfishEncrypt#0" expanded="false" />
-            <element signature="method#doCopy#0;class#BlowfishEncrypt#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -604,7 +694,7 @@
         <state relative-caret-position="144">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#136#137#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -615,7 +705,7 @@
         <state relative-caret-position="90">
           <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="method#doCopy#0;class#Encryptor#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -626,10 +716,11 @@
           <caret line="16" column="64" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getInstance#0;class#BlowfishEncrypt#0" expanded="false" />
+            <element signature="method#BlowfishEncrypt#0;class#BlowfishEncrypt#0" expanded="false" />
             <element signature="method#encrypt#0;class#BlowfishEncrypt#0" expanded="false" />
             <element signature="method#decrypt#0;class#BlowfishEncrypt#0" expanded="false" />
             <element signature="method#encryptOrDecrypt#0;class#BlowfishEncrypt#0" expanded="false" />
-            <element signature="method#doCopy#0;class#BlowfishEncrypt#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -648,9 +739,10 @@
         <state relative-caret-position="1404">
           <caret line="107" column="20" lean-forward="true" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#MainGUI#0;class#MainGUI#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#initScreen#0;class#MainGUI#0" expanded="false" />
             <element signature="class#AddListener#0;class#MainGUI#0" expanded="false" />
+            <element signature="class#RemoveListener#0;class#MainGUI#0" expanded="false" />
             <element signature="class#SortedListModel#0;class#MainGUI#0" expanded="false" />
             <element signature="method#add#0;class#SortedListModel#0;class#MainGUI#0" expanded="false" />
             <element signature="method#addAll#0;class#SortedListModel#0;class#MainGUI#0" expanded="false" />
@@ -672,7 +764,7 @@
         <state relative-caret-position="432">
           <caret line="24" column="74" lean-forward="false" selection-start-line="24" selection-start-column="74" selection-end-line="24" selection-end-column="74" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#136#137#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -680,14 +772,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/original.txt" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/decrypted.txt" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/encrypted.txt" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/core/exceptions/CannotCreateEncryptException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="61" lean-forward="false" selection-start-line="2" selection-start-column="61" selection-end-line="2" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/.acab">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -730,43 +814,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/core/yarik/Figure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/core/yarik/Circle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="45" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/core/yarik/Cilinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/core/yarik/YM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="30" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/core/yarik/Figure.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/core/yarik/Circle.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/core/yarik/Cilinder.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/core/yarik/YM.java" />
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/jce.jar!/javax/crypto/Cipher.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="45" column="13" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -774,7 +829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-918">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -782,50 +836,118 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2903">
           <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/core/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#105#106#0" expanded="true" />
             <element signature="e#136#137#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/core/encryptors/blowfish/BlowfishEncrypt.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/core/models/Settings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="51" lean-forward="false" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#encrypt#0;class#BlowfishEncrypt#0" expanded="false" />
-            <element signature="method#decrypt#0;class#BlowfishEncrypt#0" expanded="false" />
-            <element signature="method#encryptOrDecrypt#0;class#BlowfishEncrypt#0" expanded="false" />
-            <element signature="method#doCopy#0;class#BlowfishEncrypt#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="216">
+          <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/core/encryptors/Encryptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        <state relative-caret-position="144">
+          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding>
+            <element signature="method#doCopy#0;class#Encryptor#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/core/encryptors/Folders.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#193#194#0" expanded="true" />
+            <element signature="e#225#226#0" expanded="true" />
+            <element signature="e#271#272#0" expanded="true" />
+            <element signature="e#298#299#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/core/exceptions/CannotCreateEncryptException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/.temp.ino">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/core/encryptors/aes/AESEncrypt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="84" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/core/encryptors/des/DESEncrypt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/core/encryptors/oaep/OAEPEncrypt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/core/encryptors/blowfish/BlowfishEncrypt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getInstance#0;class#BlowfishEncrypt#0" expanded="false" />
+            <element signature="method#BlowfishEncrypt#0;class#BlowfishEncrypt#0" expanded="false" />
+            <element signature="method#encrypt#0;class#BlowfishEncrypt#0" expanded="false" />
+            <element signature="method#decrypt#0;class#BlowfishEncrypt#0" expanded="false" />
+            <element signature="method#encryptOrDecrypt#0;class#BlowfishEncrypt#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/core/gui/MainGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-663">
-          <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+        <state relative-caret-position="-530">
+          <caret line="63" column="42" lean-forward="false" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
           <folding>
-            <element signature="method#MainGUI#0;class#MainGUI#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#initScreen#0;class#MainGUI#0" expanded="false" />
             <element signature="class#AddListener#0;class#MainGUI#0" expanded="false" />
+            <element signature="class#RemoveListener#0;class#MainGUI#0" expanded="false" />
             <element signature="class#SortedListModel#0;class#MainGUI#0" expanded="false" />
             <element signature="method#add#0;class#SortedListModel#0;class#MainGUI#0" expanded="false" />
             <element signature="method#addAll#0;class#SortedListModel#0;class#MainGUI#0" expanded="false" />

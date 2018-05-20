@@ -1,7 +1,8 @@
-package core.encryptors.blowfish;
+package core.encryptors.des;
 
 import core.encryptors.Encryptor;
 import core.encryptors.Folders;
+import core.encryptors.aes.AESEncrypt;
 import core.exceptions.CannotCreateEncryptException;
 
 import javax.crypto.Cipher;
@@ -14,38 +15,38 @@ import java.nio.file.Files;
 import java.security.Key;
 import java.security.NoSuchAlgorithmException;
 
-public class BlowfishEncrypt implements Encryptor {
+public class DESEncrypt implements Encryptor {
 
-    private static BlowfishEncrypt instance;
+    private static DESEncrypt instance;
     private Key secretKey;
 
-    public static BlowfishEncrypt getInstance() throws CannotCreateEncryptException {
+    public static DESEncrypt getInstance() throws CannotCreateEncryptException {
         if (instance == null) {
-            instance = new BlowfishEncrypt();
+            instance = new DESEncrypt();
         }
         return instance;
     }
 
-    private BlowfishEncrypt() throws CannotCreateEncryptException {
+    private DESEncrypt() throws CannotCreateEncryptException {
         try {
-            File folder = new File(PACKAGE + Folders.BLOWFISH);
+            File folder = new File(PACKAGE + Folders.DES);
             if (!Files.exists(folder.toPath())) {
                 folder.mkdir();
             }
-            File key = new File(PACKAGE + Folders.BLOWFISH + "/.acab");
+            File key = new File(PACKAGE + Folders.DES + "/.acab");
             if (key.exists()) {
                 try (FileInputStream fileIn = new FileInputStream(key);
-                     ObjectInputStream in = new ObjectInputStream(fileIn)){
+                     ObjectInputStream in = new ObjectInputStream(fileIn)) {
                     this.secretKey = (Key) in.readObject();
                 } catch (Exception e) {
                     throw new NoSuchAlgorithmException();
                 }
             } else {
-                KeyGenerator keyGenerator = KeyGenerator.getInstance("Blowfish");
-                keyGenerator.init(128);
+                KeyGenerator keyGenerator = KeyGenerator.getInstance("DES");
+                keyGenerator.init(56);
                 this.secretKey = keyGenerator.generateKey();
                 try (FileOutputStream fileOut = new FileOutputStream(key);
-                     ObjectOutputStream out = new ObjectOutputStream(fileOut)){
+                     ObjectOutputStream out = new ObjectOutputStream(fileOut)) {
                     out.writeObject(this.secretKey);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -67,9 +68,9 @@ public class BlowfishEncrypt implements Encryptor {
     }
 
     private void encryptOrDecrypt(int mode, InputStream is, OutputStream os) throws Throwable {
-        Cipher cipher = Cipher.getInstance("Blowfish/CFB/NoPadding");
+        Cipher cipher = Cipher.getInstance("DES/CFB/NoPadding");
 
-        byte[] iv = {1, 4, 8, 8, 0, 2, 2, 8};
+        byte[] iv = {1, 9, 9, 8, 0, 3, 2, 2};
         IvParameterSpec ivspec = new IvParameterSpec(iv);
 
         if (mode == Cipher.ENCRYPT_MODE) {
